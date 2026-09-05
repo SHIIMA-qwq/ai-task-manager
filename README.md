@@ -241,24 +241,3 @@ curl -X DELETE http://localhost:5000/tasks/1
 ## Git
 
 Проект уже содержит `.gitignore`, исключающий `node_modules`, `.env`, кэш Python и другие временные файлы.
-
-Пример последовательности команд для первой публикации:
-
-```bash
-git init
-git add .
-git commit -m "Initial project setup"
-git add database/schema.sql
-git commit -m "Add PostgreSQL schema"
-git add backend/
-git commit -m "Implement tasks REST API"
-git add frontend/
-git commit -m "Implement React task manager"
-git add python/
-git commit -m "Add CSV export script"
-git add README.md
-git commit -m "Add README"
-git branch -M main
-git remote add origin <ВАШ_URL_РЕПОЗИТОРИЯ>
-git push -u origin main
-```
