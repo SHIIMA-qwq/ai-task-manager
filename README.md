@@ -241,3 +241,4 @@ curl -X DELETE http://localhost:5000/tasks/1
 ## Git
 
 Проект уже содержит `.gitignore`, исключающий `node_modules`, `.env`, кэш Python и другие временные файлы.
+
