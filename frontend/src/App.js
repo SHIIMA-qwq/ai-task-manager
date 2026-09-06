@@ -75,17 +75,21 @@ function App() {
 
       <TaskForm onCreate={handleCreate} isSubmitting={isSubmitting} />
 
-      <section className="task-list-section">
-        <h2>Список задач</h2>
-        {isLoading ? (
-          <p className="loading-state">Загрузка задач...</p>
-        ) : (
-          <TaskList
-            tasks={tasks}
-            onStatusChange={handleStatusChange}
-            onDelete={handleDelete}
-          />
-        )}
+      <section className="window-panel task-list-section">
+        <div className="window-titlebar">
+          <span className="window-titlebar-label">Список задач</span>
+        </div>
+        <div className="window-body">
+          {isLoading ? (
+            <p className="loading-state">Загрузка задач...</p>
+          ) : (
+            <TaskList
+              tasks={tasks}
+              onStatusChange={handleStatusChange}
+              onDelete={handleDelete}
+            />
+          )}
+        </div>
       </section>
     </div>
   );
